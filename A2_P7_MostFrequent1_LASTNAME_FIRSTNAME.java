@@ -8,11 +8,38 @@
 //   // Answer:   Theta(     )
 //
 //   public static int mostFrequent1(int n, int [] A) {
+//       int candidate = A[1]; // Potential candidate for the most frequent element
+//       int count = 1;       // Count of the current candidate
 //
+//       for (int i = 2; i <= n; i++) {
+//           if (A[i] == candidate) {
+//               count++;
+//           } else {
+//               count--;
+//           }
 //
+//           if (count == 0) {
+//               candidate = A[i];
+//               count = 1;
+//           }
+//       }
 //
+//       // Now, verify if 'candidate' is the most frequent element by counting its occurrences
+//       int candidateCount = 0;
+//       for (int i = 1; i <= n; i++) {
+//           if (A[i] == candidate) {
+//               candidateCount++;
+//           }
+//       }
 //
-//
+//       // Check if the 'candidate' is the most frequent element
+//       if (candidateCount > (n - 1) / 2) {
+//           return candidate;
+//       } else {
+//           // No element appears more than (n - 1)/2 times
+//           // You can return a sentinel value, throw an exception, or handle it as needed
+//           return -1;
+//       }
 //   }
 //
 //
