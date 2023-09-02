@@ -4,51 +4,50 @@ public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
    
 
    public static boolean isPermutation(int n, int [] A) {
-      int[] count = new int[n + 1];
 
-      for (int i = 1; i <= n; i++) {
-         count[i] = 0;
-      }
-
-      for (int i = 1; i <= n; i++) {
-         int current = A[i];
-
-
-         if (current <= 0 || current > n) {
-            for (int j = 1; j <= n; j++) {
-               if (j < n) {
-               }
-            }
-            System.out.println("A[" + i + "] = " + current + " which is out of range.");
-            return false;
-         }
-
-         count[current]++;
-      }
+      boolean outOfBounds = false;
 
       boolean hasDuplicate = false;
       boolean hasZeroCount = false;
 
       for (int i = 1; i <= n; i++) {
-         if (count[i] == 0) {
+         int current = A[i];
+         int count=i;
+
+         if (current <= 0 || current > n) {
+            System.out.println("A[" + i + "] = " + current + " which is out of range.");
+            outOfBounds = true;
+         }
+         if (current == 0) {
             System.out.println(i + " appears 0 times in the array.");
             hasZeroCount = true;
-         } else if (count[i] != 1) {
-            for (int j = 1; j <= n; j++) {
-               if (j < n) {
-               }
-            }
-            System.out.println(i + " appears " + count[i] + " times in the array.");
+         }
+         if (current != 1) {
+            System.out.println(i + " appears " + current + " times in the array.");
             hasDuplicate = true;
          }
       }
 
-      if (hasDuplicate || hasZeroCount) {
+
+//      for (int i = 1; i <= n; i++) {
+//
+//      }
+//
+//      for (int i = 1; i <= n; i++) {
+//         if (count[i] != 1) {
+//            System.out.println(i + " appears " + count[i] + " times in the array.");
+//            hasDuplicate = true;
+//         }
+//      }
+
+      if (hasDuplicate || hasZeroCount || outOfBounds) {
          return false;
       }
 
+
       return true;
    }
+
             
 
 
