@@ -1,3 +1,5 @@
+package ASSIGNMENT2_ORTIZ_BRIAN_SOLUTIONS;
+
 public class A2_P8_MostFrequent2_LASTNAME_FIRSTNAME {
 
    public static String name = "LASTNAME_FIRSTNAME";
