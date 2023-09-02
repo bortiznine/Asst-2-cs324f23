@@ -4,11 +4,42 @@ public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
    
 
    public static boolean isPermutation(int n, int [] A) {
-      
+      int[] count = new int[n + 1]; // Initialize an array to count occurrences
 
+      for (int i = 1; i <= n; i++) {
+         count[i] = 0; // Initialize the count array for values 1 to n
+      }
 
+      for (int i = 1; i <= n; i++) {
+         int current = A[i];
 
+         // Check if the current value is out of range
+         if (current <= 0 || current > n) {
+            System.out.println("A["+i+"] = " + current + " which is out of range.");
+            return false;
+         }
 
+         count[current]++; // Increment the count for the current value
+      }
+
+      boolean hasDuplicate = false;
+
+      for (int i = 1; i <= n; i++) {
+         if (count[i] != 1) {
+            for (int j = 1; j <= n; j++) {
+               if (j < n) {
+               }
+            }
+            System.out.println(i + " appears " + count[i] + " times in the array.");
+            hasDuplicate = true;
+         }
+      }
+
+      if (hasDuplicate) {
+         return false;
+      }
+
+      return true; // It's a permutation
    }
             
 
