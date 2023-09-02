@@ -4,28 +4,36 @@ public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
    
 
    public static boolean isPermutation(int n, int [] A) {
-      int[] count = new int[n + 1]; // Initialize an array to count occurrences
+      int[] count = new int[n + 1];
 
       for (int i = 1; i <= n; i++) {
-         count[i] = 0; // Initialize the count array for values 1 to n
+         count[i] = 0;
       }
 
       for (int i = 1; i <= n; i++) {
          int current = A[i];
 
-         // Check if the current value is out of range
+
          if (current <= 0 || current > n) {
-            System.out.println("A["+i+"] = " + current + " which is out of range.");
+            for (int j = 1; j <= n; j++) {
+               if (j < n) {
+               }
+            }
+            System.out.println("A[" + i + "] = " + current + " which is out of range.");
             return false;
          }
 
-         count[current]++; // Increment the count for the current value
+         count[current]++;
       }
 
       boolean hasDuplicate = false;
+      boolean hasZeroCount = false;
 
       for (int i = 1; i <= n; i++) {
-         if (count[i] != 1) {
+         if (count[i] == 0) {
+            System.out.println(i + " appears 0 times in the array.");
+            hasZeroCount = true;
+         } else if (count[i] != 1) {
             for (int j = 1; j <= n; j++) {
                if (j < n) {
                }
@@ -35,11 +43,11 @@ public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
          }
       }
 
-      if (hasDuplicate) {
+      if (hasDuplicate || hasZeroCount) {
          return false;
       }
 
-      return true; // It's a permutation
+      return true;
    }
             
 
