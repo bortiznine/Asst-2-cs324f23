@@ -1,3 +1,5 @@
+package ASSIGNMENT2_ORTIZ_BRIAN_SOLUTIONS;
+
 public class A2_P5_Permutation_ORTIZ_BRIAN {
 
    public static String name = "ORTIZ_BRIAN";
