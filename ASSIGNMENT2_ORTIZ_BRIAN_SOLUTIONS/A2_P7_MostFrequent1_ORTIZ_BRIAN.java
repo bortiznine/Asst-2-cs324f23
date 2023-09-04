@@ -1,6 +1,8 @@
-public class A2_P7_MostFrequent1_LASTNAME_FIRSTNAME {
+package ASSIGNMENT2_ORTIZ_BRIAN_SOLUTIONS;
 
-   public static String name = "LASTNAME_FIRSTNAME";
+public class A2_P7_MostFrequent1_ORTIZ_BRIAN {
+
+   public static String name = "ORTIZ_BRIAN";
 
 
    // What is the running time of your method mostFrequent1?
