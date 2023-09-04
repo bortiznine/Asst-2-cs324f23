@@ -1,6 +1,6 @@
-public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
+public class A2_P5_Permutation_ORTIZ_BRIAN {
 
-   public static String name = "LASTNAME_FIRSTNAME";
+   public static String name = "ORTIZ_BRIAN";
 
 
    public static boolean isPermutation(int n, int [] A) {
@@ -19,7 +19,6 @@ public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
             count[current]++;
          }
       }
-
       boolean hasDuplicate = false;
 
       for (int i = 1; i <= n; i++) {
