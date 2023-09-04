@@ -5,7 +5,7 @@
 //
 //   // What is the running time of your method mostFrequent1?
 //   //
-//   // Answer:   Theta(     )
+//   // Answer:   Theta(  n   )
 //
 //   public static int mostFrequent1(int n, int [] A) {
 //       int candidate = A[1]; // Potential candidate for the most frequent element
