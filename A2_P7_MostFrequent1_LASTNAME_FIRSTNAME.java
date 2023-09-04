@@ -5,29 +5,32 @@ public class A2_P7_MostFrequent1_LASTNAME_FIRSTNAME {
 
    // What is the running time of your method mostFrequent1?
    //
-   // Answer:   Theta(  n   )
+   // Answer:   Theta(  n^2   )
 
    public static int mostFrequent1(int n, int [] A) {
-       int count = 1;       // Count of the current candidate
+       int count = 0;
+       int mostFrequent = -1;
 
-       for (int i = 1; i <=n; ++i) {
+       for (int i = 1; i <= n; ++i) {
            int value = A[i];
            int tempCount = 1;
-           for (int j = 1+i; j <= n; ++j) {
+
+           for (int j = i + 1; j <= n; ++j) {
                if (value == A[j]) {
                    tempCount++;
                }
-               if (tempCount > count) {
-                   count = tempCount;
-               }
+           }
 
+           if (tempCount > count) {
+               count = tempCount;
+               mostFrequent = value;
            }
        }
- if(count > 1){
-     return count;
- }
 
-           return -1;
+       if (count > 1) {
+           return mostFrequent;
+       }
+       return -1;
 
    }
 
