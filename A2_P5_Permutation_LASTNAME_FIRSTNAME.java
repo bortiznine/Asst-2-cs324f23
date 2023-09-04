@@ -4,11 +4,9 @@ public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
 
 
    public static boolean isPermutation(int n, int [] A) {
-
       boolean outOfBounds = false;
-
-      boolean hasDuplicate = false;
-      boolean hasZeroCount = false;
+      boolean[] visited = new boolean[n + 1]; // To track visited values
+      int[] count = new int[n + 1]; // To count the occurrence of each value
 
       for (int i = 1; i <= n; i++) {
          int current = A[i];
@@ -18,29 +16,32 @@ public class A2_P5_Permutation_LASTNAME_FIRSTNAME {
             outOfBounds = true;
             break;
          }
-      }      for (int i = 1; i <= n; i++) {
-         int current = A[i];
 
-         if (current == 0) {
-            System.out.println(i + " appears 0 times in the array.");
-            hasZeroCount = true;
-            break;
+         visited[current] = true;
+         count[current]++;
+      }
+
+      boolean missingValue = false;
+      boolean hasDuplicate = false;
+
+      for (int i = 1; i <= n; i++) {
+         if (count[i] > 1) {
+            System.out.println( i + " appears " + count[i] + " times in the array.");
+            hasDuplicate = true;
          }
       }
-//     for (int i = 1; i <= n; i++) {
-//         int current = A[i];
-//
-//         if (current != 1) {
-//            System.out.println(i + " appears " + current + " times in the array.");
-//            hasDuplicate = true;
-//            break;
-//         }
-//      }
 
-      if (hasDuplicate || hasZeroCount || outOfBounds) {
-         return false;
+      // Check for missing values
+      for (int i = 1; i <= n; i++) {
+         if (!visited[i]) {
+            System.out.println(i + " appears " + "0 times in the array.");
+            return false; // Return false if a missing value is found
+         }
       }
 
+      if (outOfBounds || hasDuplicate) {
+         return false;
+      }
 
       return true;
    }
