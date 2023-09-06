@@ -1,0 +1,29 @@
+C:\Users\pengu\.jdks\openjdk-18.0.1.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\lib\idea_rt.jar=59794:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.2\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\pengu\Documents\School Junk\CS324\Asst 2, cs-324-f23\out\production\Asst 2, cs-324-f23" A2_P6_SumOfThree_ORTIZ_BRIAN
+
+ORTIZ_BRIAN
+A2_P6_SumOfThree.
+In O(n^2) time, determine if three array elements have the desired sum.
+
+
+Test 1,  n = 5, g = 24:  A[2] = 3, A[3] = 6, and A[5] = 15 sum to 24.
+
+Test 2,  n = 6, g = 67:  No three elements in A sum to 67.
+
+Test 3,  n = 8, g = 96:  A[2] = 8, A[5] = 37, and A[7] = 51 sum to 96.
+
+Test 4,  n = 8, g = 101:  No three elements in A sum to 101.
+
+Test 5,  n = 10, g = 229:  A[3] = 35, A[6] = 79, and A[10] = 115 sum to 229.
+
+Test 6,  n = 20, g = 401:  A[4] = 59, A[8] = 101, and A[20] = 241 sum to 401.
+
+Test 7,  n = 30, g = 890:  No three elements in A sum to 890.
+
+Test 8,  n = 40, g = 1000:  A[23] = 282, A[25] = 313, and A[35] = 405 sum to 1000.
+
+Test 9,  n = 50, g = 1102:  A[20] = 231, A[26] = 296, and A[50] = 575 sum to 1102.
+
+Test 10,  n = 100, g = 2504:  A[71] = 736, A[74] = 765, and A[98] = 1003 sum to 2504.
+
+
+Process finished with exit code 0

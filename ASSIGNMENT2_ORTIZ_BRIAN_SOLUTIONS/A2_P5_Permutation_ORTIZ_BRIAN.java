@@ -29,8 +29,6 @@ public class A2_P5_Permutation_ORTIZ_BRIAN {
             hasDuplicate = true;
          }
       }
-
-      // Check for missing values
       for (int i = 1; i<= n; i++) {
          if(!visited[i]) {
             System.out.println(i + " appears 0 times in the array.");

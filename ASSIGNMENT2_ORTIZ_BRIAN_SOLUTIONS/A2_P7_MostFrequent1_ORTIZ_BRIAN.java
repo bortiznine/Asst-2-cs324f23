@@ -17,7 +17,7 @@ public class A2_P7_MostFrequent1_ORTIZ_BRIAN {
            int value = A[i];
            int tempCount = 1;
 
-           for (int j = i + 1; j <= n; ++j) {
+           for (int j = i + 1; j<= n; ++j) {
                if (value == A[j]) {
                    tempCount++;
                }
