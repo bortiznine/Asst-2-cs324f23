@@ -36,11 +36,7 @@ public class A2_P5_Permutation_ORTIZ_BRIAN {
          }
       }
 
-      if (outOfBounds || hasDuplicate) {
-         return false;
-      }
-
-      return true;
+       return !outOfBounds && !hasDuplicate;
    }
 
 
